@@ -1,0 +1,25 @@
+PROBLEM: N = 6
+         Arr[] = {12, 35, 1, 10, 34, 1}
+Output: 34
+
+Explanation: The largest element of the 
+array is 35 and the second largest element
+is 34.
+
+
+SOLUTION: 
+
+int print2largest(int arr[], int n) {
+	   
+	    sort(arr,arr+n);
+        int m = arr[n-1];
+        for(int i = n-1;i>=0;i--){
+            if(arr[i] < m)
+            return arr[i];
+        }
+        return -1;
+        
+	}
+  
+  
+  
