@@ -1,0 +1,50 @@
+PROBLEM:  Test cases= 2
+          n=4
+          arr[]=5 4 2 1
+          n=1
+          arr[]=8
+
+Output:
+5 1
+8 8
+
+Explanation:
+            Testcase 1:
+            Maximum element is: 5 
+            Minimum element is: 1
+            
+            
+SOLUTION:  
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	int n, arr[n];
+	cin>>t;
+	
+	while(t--){
+	    
+	    cin>>n;
+	    
+	    for(int i=0;i<n;i++){
+	        cin>>arr[i];
+	    }
+	    
+	    int min=arr[0], max=arr[0];
+	    for(int i=0;i<n;i++){
+	        if(arr[i]<=min){
+	            min=arr[i];
+	        }
+	        else if(arr[i]>=max){
+	            max=arr[i];
+	        }
+	    }
+	    cout<<max<<" "<<min<<endl;
+	    
+	}
+	return 0;
+}
+
+
